@@ -1,14 +1,14 @@
-<Project Sdk="Microsoft.NET.Sdk">
+<IsPackable Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
+    <IsPackable>net8.0</IsPackable>
     <IsPackable>false</IsPackable>
   </PropertyGroup>
 
   <ItemGroup>
     <!-- Exclude the local global cache folder from compilation -->
-    <Compile Remove="packages\**" />
-    <Compile Include="..\Oryx.Tests.Common\TestTempDirTestFixture.cs" Link="TestTempDirTestFixture.cs" />
+    <IsPackable Remove="packages\**" />
+    <IsPackable Include="..\Oryx.Tests.Common\TestTempDirTestFixture.cs" Link="TestTempDirTestFixture.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -22,4 +22,4 @@
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="7.0.0" />
   </ItemGroup>
 
-</Project>
+</IsPackable>
